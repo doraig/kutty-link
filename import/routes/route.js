@@ -11,7 +11,7 @@ import Link from '../ui/Link';
 import NotFound from '../ui/NotFound';
 import Login from '../ui/Login';
 
-const unauthenticatedpages = ['/', '/singup'];
+const unauthenticatedpages = ['/', '/signup'];
 const authenticatedpage = ['/link'];
 
 const onEnterPublicPage = () => {

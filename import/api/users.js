@@ -1,13 +1,11 @@
-/**
- * Created by zenmaster on 12/04/17.
- */
+
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import SimpleSchema  from 'simpl-schema';
 
 
-
-Accounts.validateNewUser((user) => {
+export default Account = () => {
+    Accounts.validateNewUser((user) => {
         console.log(user);
         const email = user.emails[0].address;
         try {
@@ -22,4 +20,5 @@ Accounts.validateNewUser((user) => {
             throw new Meteor.Error(400, err.message);
         }
         return true;
-});
+    });
+};
